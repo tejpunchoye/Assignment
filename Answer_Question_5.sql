@@ -49,7 +49,6 @@ BEGIN
         'Order Status: ' || v_order_status || ' | ' ||
         'Invoice References: ' || v_invoice_references
     );
-
     -- Close the cursor
     CLOSE median_order_cur;
 
@@ -65,9 +64,7 @@ EXCEPTION
         END IF;
         DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
 END GET_MEDIAN_ORDER_REPORT;
-/
 
-/
 BEGIN
     GET_MEDIAN_ORDER_REPORT;
 END;
